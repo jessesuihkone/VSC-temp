@@ -1,0 +1,90 @@
+body {
+    font-family:sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    background-color:honeydew;
+			transition: background-color 7.5s;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+#score {
+    font-size: 2rem;
+    font-family: fantasy;
+    margin: 1rem 0;
+}
+
+
+
+/* Button */
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0.4rem 0.9rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button:hover {
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.221);
+    padding: 0.35rem 0.9rem;
+
+}
+
+
+
+/* Memory cards */
+ul {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 5px;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    border: 5px solid rgb(2, 0 , 36);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+li:hover {
+    border: 7px solid rgb(2, 0, 36);
+}
+
+
+
+/* Animation */
+.shake {
+    animation: shake 0.1s;
+}
+
+.pop {
+    animation: pop 0.5s;
+}
+
+@keyframes shake {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(-3deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(3deg);}
+    100% {transform: rotate(0deg);}
+}
+
+@keyframes pop {
+    0% {transform: scale(1);}
+    25% {transform: scale(1.03);}
+    50% {transform: scale(1.06);}
+    75% {transform: scale(1.03);}
+    100% {transform: scale(1);}
+}
